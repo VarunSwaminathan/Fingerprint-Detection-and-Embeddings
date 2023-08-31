@@ -1,6 +1,6 @@
 # Fingerprint-Detection-and-Embeddings
 
-Part 1 – Data Collection 
+Part 1 – Data Collection: 
 More than 15 images of my hand were photographed under different light conditions and background, 
 and all have been stored and submitted along with the submission file. The entire palm of the hand was 
 taken. The camera specifications are as follows:
@@ -10,10 +10,10 @@ Camera Specifications:
 Focal Length - 4.25mm
 Megapixel – 16MP
 The data is available at the folder Train_dataset in the submission file. 
-Part 2 – Annotation 
+Part 2 – Annotation: 
 The hand images were then annotated using labelImg. The json file of every image is stored into the 
 annotated image folder in the submission file. 
-Part 3 – Detection 
+Part 3 – Detection: 
 The algorithm used to detect fingerprint regions is given below:
 1. Import necessary libraries: os, cv2, and mediapipe
 2. Initialize mediapipe hands model
@@ -33,13 +33,13 @@ h. Compute the coordinates of the bounding box around the fingertip.
 i. Draw a rectangle around the fingertip using the computed coordinates.
 ii. Save the annotated image to the output folder with the same filename.
 A sample image after detection is given below.
-Part 4 – Validation 
+Part 4 – Validation: 
 For the validation purpose, the IoU value was calculated. The images were annotated and then saved 
 also as a txt file. The x and y values from the output and the txt were compared manually and the final 
 IoU value was calculated to be 0.9464(rounded to .4f digits).
 The value could have been a lot higher but during annotation, the fingers overlapped and then there was 
 a slight error during the detection phase. 
-Part 5 – Testing 
+Part 5 – Testing:
 The model that was created was used to detect fingerprint regions in the given dataset. The accuracy of 
 the algorithm was not perfect. The detected fingertip regions were only detected from photos that had a 
 full picture of the hand. As my algorithm was based on that, some photos in the test dataset were only 
